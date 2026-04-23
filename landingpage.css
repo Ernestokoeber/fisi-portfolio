@@ -406,6 +406,7 @@ img {
 
 .status-concept { background: #e5e7eb; }
 .status-dev     { background: #fde68a; }
+.status-deploy  { background: #bfdbfe; }
 .status-done    { background: #bbf7d0; }
 
 /* ================= CONTACT ================= */
