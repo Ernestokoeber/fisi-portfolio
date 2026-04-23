@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>PaarKurs – Projekt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PaarKurs – privat genutzte Finanz-Management-App für Paare. React/TypeScript-Frontend auf Cloudflare Pages, FastAPI/PostgreSQL-Backend auf Railway, KI-Bonerkennung über Gemini Vision mit Tesseract-Fallback." />
+  <link rel="stylesheet" href="vereinswebsite.css" />
+</head>
+<body>
+
+<!-- = Switch = -->
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <span class="nav-logo">Ernesto Köber</span>
+
+    <div class="lang-switch">
+      <a href="paarkurs.html" class="active">DE</a>
+      <span>|</span>
+      <a href="paarkurs-en.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <header class="project-hero">
+    <div class="container">
+      <p class="project-category">Finanz-Management-App · Privatprojekt</p>
+      <h1 class="project-title">PaarKurs</h1>
+      <p class="project-subtitle">
+        Privat genutzte Full-Stack-Finanz-App für Paare zur gemeinsamen
+        Erfassung von Ausgaben und Belegen — mit KI-basierter Bonerkennung,
+        Offline-Modus und Sparpotential-Analyse. Motto: „Gemeinsam sparen."
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section class="project-overview">
+      <div>
+        <h3>Verantwortung</h3>
+        <p>Konzept, Frontend, Backend, Deployment</p>
+      </div>
+      <div>
+        <h3>Zeitraum</h3>
+        <p>Seit Q1 2026</p>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <p>Abgeschlossen · im Einsatz</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2>Projektbeschreibung</h2>
+      <p>
+        PaarKurs ist eine Finanz-Management-App für Haushalte und Paare.
+        Sie ermöglicht das gemeinsame Erfassen, Auswerten und Kategorisieren
+        von Ausgaben — vom Beleg-Scan über das Dashboard bis hin zu
+        Spar-Tipps auf Basis der eigenen Ausgabenanalyse.
+      </p>
+      <p>
+        Klassische Frontend-Backend-Architektur: React-SPA als Single
+        Page Application, FastAPI-API als asynchrones Backend, PostgreSQL
+        und Redis als Datenebene. KI-basierte Bonerkennung über Gemini
+        Vision mit Tesseract OCR als Offline-Fallback. Vollständig
+        offlinefähig durch IndexedDB-Sync.
+      </p>
+    </section>
+
+    <!-- TECH -->
+    <section class="project-section">
+      <h2>Technischer Ansatz</h2>
+      <ul class="tech-list">
+        <li> ° React 18 + TypeScript + Vite als Frontend-Toolchain</li>
+        <li> ° Tailwind CSS für Styling, Zustand für State, TanStack Query für Server-State, Recharts für Visualisierungen</li>
+        <li> ° FastAPI mit asynchronem SQLAlchemy als Backend</li>
+        <li> ° PostgreSQL als Hauptdatenbank, Redis für Cache und Sessions</li>
+        <li> ° Gemini Vision API für KI-basierte Bonerkennung, Tesseract OCR als Fallback</li>
+        <li> ° Cloudflare Pages für Frontend-Hosting, Railway für Backend und Datenbank</li>
+        <li> ° IndexedDB für Offline-Speicher mit automatischer Synchronisation</li>
+      </ul>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="project-section">
+      <h2>Features</h2>
+      <ul class="tech-list">
+        <li> ° Beleg-Upload mit KI-basierter Texterkennung (Gemini Vision, Tesseract-Fallback)</li>
+        <li> ° Haushalt-Sharing: beide Partner sehen alle Transaktionen und können sie bearbeiten</li>
+        <li> ° Dashboard mit KPIs (Ausgaben, Ersparnis, Top-Kategorien, Partner-Aktivitäts-Feed)</li>
+        <li> ° Einkaufsliste, ToDo-System mit Prioritäten und Fixkosten-Tracker</li>
+        <li> ° Spar-Tipps basierend auf Ausgabenanalyse, Preisvergleich und Budget-System</li>
+        <li> ° Offline-Modus mit IndexedDB und automatischer Synchronisation</li>
+      </ul>
+    </section>
+
+    <!-- FOCUS -->
+    <section class="project-section">
+      <h2>Schwerpunkte</h2>
+        <p>
+        <strong>Architektur:</strong>
+        Saubere Trennung zwischen React-SPA-Frontend (Cloudflare Pages)
+        und asynchroner FastAPI-API (Railway). PostgreSQL als Source of
+        Truth, Redis für Cache und Sessions, Railway-Volume für Bild-Assets.
+        </p>
+        <p>
+        <strong>KI-Integration:</strong>
+        Bonerkennung primär über Gemini Vision; bei großen Bildern oder
+        Ausfall greift Tesseract OCR als deterministischer Fallback. Damit
+        bleibt die Texterkennung auch ohne Cloud-Verbindung nutzbar.
+        </p>
+        <p>
+        <strong>Offline-First:</strong>
+        Alle Eingaben werden lokal in IndexedDB persistiert und im
+        Hintergrund mit dem Backend synchronisiert. Der Nutzer bleibt
+        auch ohne Verbindung handlungsfähig.
+        </p>
+        <p>
+        <strong>Shared-State für zwei Nutzer:</strong>
+        Haushalt-Sharing-Logik mit Partner-Aktivitäts-Feed, sodass
+        beide Partner die jeweils aktuellen Daten sehen, ohne dass
+        Benachrichtigungen oder Push-Logik nötig sind.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+      <a href="index.html" class="btn-secondary">Zurück zur Portfolio-Seite</a>
+    </section>
+
+  </main>
+
+</body>
+</html>

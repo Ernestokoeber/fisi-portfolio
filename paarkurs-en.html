@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PaarKurs – Project Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PaarKurs — privately used finance-management app for couples. React/TypeScript frontend on Cloudflare Pages, FastAPI/PostgreSQL backend on Railway, AI receipt OCR via Gemini Vision with Tesseract fallback." />
+  <link rel="stylesheet" href="vereinswebsite.css" />
+</head>
+<body>
+
+<!-- = Switch = -->
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <span class="nav-logo">Ernesto Koeber</span>
+
+    <div class="lang-switch">
+      <a href="paarkurs.html">DE</a>
+      <span>|</span>
+      <a href="paarkurs-en.html" class="active">EN</a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <header class="project-hero">
+    <div class="container">
+      <p class="project-category">Finance-management app · Private project</p>
+      <h1 class="project-title">PaarKurs</h1>
+      <p class="project-subtitle">
+        Privately used full-stack finance app for couples — joint expense
+        and receipt tracking with AI-based receipt OCR, offline mode, and
+        savings analysis. Tagline: "Gemeinsam sparen" (saving together).
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section class="project-overview">
+      <div>
+        <h3>Responsibility</h3>
+        <p>Concept, frontend, backend, deployment</p>
+      </div>
+      <div>
+        <h3>Timeframe</h3>
+        <p>Since Q1 2026</p>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <p>Completed · in use</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2>Project Description</h2>
+      <p>
+        PaarKurs is a finance-management app for households and couples.
+        It allows joint capture, evaluation, and categorization of
+        expenses — from receipt scanning through a KPI dashboard to
+        savings tips based on the user's own spending patterns.
+      </p>
+      <p>
+        Classic frontend/backend split: a React SPA on the frontend, an
+        asynchronous FastAPI backend, and PostgreSQL plus Redis as the
+        data layer. AI-based receipt OCR via Gemini Vision with
+        Tesseract OCR as an offline fallback. Fully offline-capable
+        through IndexedDB synchronization.
+      </p>
+    </section>
+
+    <!-- TECH -->
+    <section class="project-section">
+      <h2>Technical Approach</h2>
+      <ul class="tech-list">
+        <li> ° React 18 + TypeScript + Vite as the frontend toolchain</li>
+        <li> ° Tailwind CSS for styling, Zustand for state, TanStack Query for server state, Recharts for visualizations</li>
+        <li> ° FastAPI with asynchronous SQLAlchemy as the backend</li>
+        <li> ° PostgreSQL as primary database, Redis for cache and sessions</li>
+        <li> ° Gemini Vision API for AI-based receipt OCR, Tesseract OCR as fallback</li>
+        <li> ° Cloudflare Pages for frontend hosting, Railway for backend and database</li>
+        <li> ° IndexedDB for offline storage with automatic synchronization</li>
+      </ul>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="project-section">
+      <h2>Features</h2>
+      <ul class="tech-list">
+        <li> ° Receipt upload with AI-based text recognition (Gemini Vision with Tesseract fallback)</li>
+        <li> ° Household sharing: both partners see all transactions and can edit them</li>
+        <li> ° Dashboard with KPIs (expenses, savings, top categories, partner activity feed)</li>
+        <li> ° Shopping list, to-do system with priorities, fixed-cost tracker</li>
+        <li> ° Savings tips based on spending analysis, price comparison, and budgeting</li>
+        <li> ° Offline mode with IndexedDB and automatic synchronization</li>
+      </ul>
+    </section>
+
+    <!-- FOCUS -->
+    <section class="project-section">
+      <h2>Focus Areas</h2>
+        <p>
+        <strong>Architecture:</strong>
+        Clean separation between the React SPA frontend (Cloudflare
+        Pages) and the asynchronous FastAPI backend (Railway).
+        PostgreSQL as the source of truth, Redis for cache and sessions,
+        Railway volume for image assets.
+        </p>
+        <p>
+        <strong>AI integration:</strong>
+        Receipt recognition runs primarily on Gemini Vision; large
+        images or outages fall back to Tesseract OCR as a deterministic
+        backup. Text recognition stays usable even without a cloud
+        connection.
+        </p>
+        <p>
+        <strong>Offline-first:</strong>
+        All input is persisted to IndexedDB and synced to the backend in
+        the background. The user stays operational even without a
+        connection.
+        </p>
+        <p>
+        <strong>Shared state for two users:</strong>
+        Household-sharing logic with a partner activity feed, so both
+        partners always see the latest data without notifications or
+        push infrastructure.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+      <a href="index-en.html" class="btn-secondary">Back to portfolio</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
