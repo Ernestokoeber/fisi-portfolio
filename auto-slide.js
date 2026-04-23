@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const SPEED_PX_PER_SEC = 25;        // langsames, lesefreundliches Tempo
     const RESUME_DELAY_MS  = 2500;      // Pause nach Interaktion bevor es weiterläuft
-    const LOOP_PAUSE_MS    = 1200;      // kurze Pause am Ende vor dem Sprung zurück
 
     let position    = slider.scrollLeft;
+    let direction   = 1;                // 1 = nach rechts, -1 = nach links (Yo-Yo)
     let lastTime    = 0;
     let isPaused    = false;
     let resumeTimer = null;
@@ -49,18 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const max = slider.scrollWidth - slider.clientWidth;
 
         if (!isPaused && !document.hidden && max > 0) {
+            position += SPEED_PX_PER_SEC * delta * direction;
+
+            // An den Rändern Richtung umkehren — Yo-Yo
             if (position >= max) {
-                // Ende erreicht — kurz halten, dann sanft zurück zum Anfang
-                pause();
-                setTimeout(() => {
-                    slider.scrollTo({ left: 0, behavior: "smooth" });
-                    position = 0;
-                    queueResume();
-                }, LOOP_PAUSE_MS);
-            } else {
-                position += SPEED_PX_PER_SEC * delta;
-                slider.scrollLeft = position;
+                position = max;
+                direction = -1;
+            } else if (position <= 0) {
+                position = 0;
+                direction = 1;
             }
+            slider.scrollLeft = position;
         } else {
             // Sync mit manuellem Stand, damit Übergang nahtlos ist
             position = slider.scrollLeft;
