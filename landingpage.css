@@ -243,6 +243,18 @@ ul {
     color: #f1f5f9;
 }
 
+.stack-group {
+    margin-top: 2.5rem;
+}
+
+.stack-group-title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.0625rem solid var(--accent);
+}
+
 /* ================= AVAILABILITY ================= */
 
 .availability {
