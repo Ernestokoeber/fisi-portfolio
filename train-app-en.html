@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Train-APP – Project Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Train-APP — Progressive Web App for beep test, training management, player statistics, tactics board, and AI-assisted training summaries. Internal tool for TSV Lindau Basketball." />
+  <link rel="stylesheet" href="vereinswebsite.css" />
+</head>
+<body>
+
+<!-- = Switch = -->
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <span class="nav-logo">Ernesto Koeber</span>
+
+    <div class="lang-switch">
+      <a href="train-app.html">DE</a>
+      <span>|</span>
+      <a href="train-app-en.html" class="active">EN</a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <header class="project-hero">
+    <div class="container">
+      <p class="project-category">Training & team management · Internal tool for TSV Lindau Basketball</p>
+      <h1 class="project-title">Train-APP</h1>
+      <p class="project-subtitle">
+        Progressive Web App for the beep test, training management,
+        player statistics, and tactics board for the first men's
+        basketball team of TSV Lindau 1850 e.V. — installable on mobile,
+        offline-capable, deployed via GitHub Pages.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section class="project-overview">
+      <div>
+        <h3>Responsibility</h3>
+        <p>Concept, development, deployment</p>
+      </div>
+      <div>
+        <h3>Timeframe</h3>
+        <p>Season 2025/26</p>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <p>Completed</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2>Project Description</h2>
+      <p>
+        Internal training and team-management tool for the first men's
+        basketball team of TSV Lindau 1850 e.V. Covers beep test,
+        training management, player statistics, and a tactics board in a
+        single installable Progressive Web App — usable directly from the
+        browser, fully offline-capable.
+      </p>
+      <p>
+        Built deliberately without a frontend framework, split modularly
+        into specialized JS files (history, schedule, training, stats,
+        tactics, notes). Data lives in localStorage with a versioned
+        schema and migrations; AI-assisted training summaries run via
+        the Gemini API with a deterministic fallback.
+      </p>
+    </section>
+
+    <!-- TECH -->
+    <section class="project-section">
+      <h2>Technical Approach</h2>
+      <ul class="tech-list">
+        <li> ° Vanilla JavaScript, CSS, and HTML — deliberately without a frontend framework</li>
+        <li> ° Progressive Web App via manifest.webmanifest and Service Worker (cache-based offline use, currently beeptest-v67)</li>
+        <li> ° Modular JS layout split into specialized files (history.js, schedule.js, training.js, stats.js, tactics.js, notes.js)</li>
+        <li> ° Gemini API for AI-assisted training summaries, with a deterministic fallback when the API is unavailable</li>
+        <li> ° jsPDF for PDF exports</li>
+        <li> ° localStorage as the data store, with a versioned schema and migrations</li>
+      </ul>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="project-section">
+      <h2>Features</h2>
+      <ul class="tech-list">
+        <li> ° Beep-test timer with level and shuttle tracking for team runs</li>
+        <li> ° Training management with drill picker, team shot percentages per category, and traffic-light trend comparison against the previous session</li>
+        <li> ° Team heatmap visualizing training performance</li>
+        <li> ° Player statistics with free-throw sparkline, attendance streaks, and position-based aggregates</li>
+        <li> ° Tactics board with bidirectional note linking</li>
+        <li> ° AI training summary via Gemini with a deterministic fallback</li>
+        <li> ° Backup import/export with schema versioning</li>
+        <li> ° Form-of-the-week dashboard</li>
+      </ul>
+    </section>
+
+    <!-- FOCUS -->
+    <section class="project-section">
+      <h2>Focus Areas</h2>
+        <p>
+        <strong>Security:</strong>
+        Strict Content Security Policy, XSS protection via consistent
+        HTML escaping, API-key sanitization on export.
+        </p>
+        <p>
+        <strong>Privacy / GDPR:</strong>
+        Self-hosted Google Fonts without third-party DNS — no external
+        tracking endpoints.
+        </p>
+        <p>
+        <strong>Performance:</strong>
+        <code>defer</code> on all script tags; logo asset reduced from
+        791 KB to 138 KB (−83 %).
+        </p>
+        <p>
+        <strong>Mobile & offline:</strong>
+        44 × 44 touch targets, responsive layout, and full offline use
+        via the Service Worker cache.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+      <a href="index-en.html" class="btn-secondary">Back to portfolio</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
