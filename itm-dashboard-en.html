@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ITM Backup Dashboard – Project Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Internal web dashboard for ITM Technologies for centralized monitoring and validation of customer backups: Python/FastAPI, security-first architecture, audit trail." />
+  <link rel="stylesheet" href="vereinswebsite.css" />
+</head>
+<body>
+
+<!-- = Switch = -->
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <span class="nav-logo">Ernesto Koeber</span>
+
+    <div class="lang-switch">
+      <a href="itm-dashboard.html">DE</a>
+      <span>|</span>
+      <a href="itm-dashboard-en.html" class="active">EN</a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <header class="project-hero">
+    <div class="container">
+      <p class="project-category">Internal web dashboard · Practical project at ITM Technologies</p>
+      <h1 class="project-title">ITM Backup Dashboard</h1>
+      <p class="project-subtitle">
+        Backup validation and security dashboard for centralized
+        monitoring of customer backups at ITM Technologies — with
+        audit trail, KPI overview, and a security-first architecture.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section class="project-overview">
+      <div>
+        <h3>Responsibility</h3>
+        <p>Concept, backend, frontend</p>
+      </div>
+      <div>
+        <h3>Timeframe</h3>
+        <p>Since 2026</p>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <p>In Development</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2>Project Description</h2>
+      <p>
+        Internal web dashboard for ITM Technologies for centralized
+        monitoring and validation of customer backups. The goal is a
+        consolidated view of all backup sources with clear status
+        signals, KPI overview, and a complete audit trail for
+        administrative review decisions.
+      </p>
+      <p>
+        Built around classic layered separation (routes, models,
+        services) for maintainability and extensibility. Dark-theme UI
+        in ITM branding with a cyan accent colour; deliberately without
+        npm packages or JS frameworks to minimize the attack surface.
+      </p>
+    </section>
+
+    <!-- TECH -->
+    <section class="project-section">
+      <h2>Technical Approach</h2>
+      <ul class="tech-list">
+        <li> ° Python with FastAPI on the backend</li>
+        <li> ° Jinja2 for server-side templating</li>
+        <li> ° Vanilla JavaScript for interactive components</li>
+        <li> ° Custom CSS without Tailwind or Bootstrap</li>
+        <li> ° Pydantic for data validation, Pydantic Settings for configuration management</li>
+        <li> ° Deliberately no npm packages or JS frameworks, to minimize the attack surface</li>
+      </ul>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="project-section">
+      <h2>Features</h2>
+      <ul class="tech-list">
+        <li> ° Customer overview with traffic-light status (green / yellow / red)</li>
+        <li> ° KPI cards for total backups, success rate, open reviews, and critical errors</li>
+        <li> ° Heatmap visualizing backup health across customers and timeframes</li>
+        <li> ° Audit trail logging and documenting every review decision</li>
+        <li> ° Overlay-based secondary pages for settings, reports, and full audit view</li>
+      </ul>
+    </section>
+
+    <!-- FOCUS -->
+    <section class="project-section">
+      <h2>Focus Areas</h2>
+        <p>
+        <strong>Security:</strong>
+        Strict Content Security Policy, HTTP security headers
+        (X-Frame-Options, HSTS, Referrer-Policy), and HttpOnly cookies
+        as the foundation for upcoming authentication.
+        </p>
+        <p>
+        <strong>Architecture:</strong>
+        Modular layered separation (routes, models, services) for
+        maintainability and extensibility. Clear separation between
+        server-side rendering and targeted frontend interactivity.
+        </p>
+        <p>
+        <strong>UX:</strong>
+        Dark theme in ITM branding with a cyan accent. Consistent
+        status signals (traffic-light logic) and overlay-based
+        secondary pages for a focused main view.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+      <a href="index-en.html" class="btn-secondary">Back to portfolio</a>
+    </section>
+
+  </main>
+
+</body>
+</html>

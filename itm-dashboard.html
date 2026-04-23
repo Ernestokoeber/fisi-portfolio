@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>ITM Backup Dashboard – Projekt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Internes Web-Dashboard für ITM Technologies zur zentralen Überwachung und Validierung von Kunden-Backups: Python/FastAPI, Security-first-Architektur, Audit-Trail." />
+  <link rel="stylesheet" href="vereinswebsite.css" />
+</head>
+<body>
+
+<!-- = Switch = -->
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <span class="nav-logo">Ernesto Köber</span>
+
+    <div class="lang-switch">
+      <a href="itm-dashboard.html" class="active">DE</a>
+      <span>|</span>
+      <a href="itm-dashboard-en.html">EN</a>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <header class="project-hero">
+    <div class="container">
+      <p class="project-category">Internes Web-Dashboard · Praxisprojekt bei ITM Technologies</p>
+      <h1 class="project-title">ITM Backup Dashboard</h1>
+      <p class="project-subtitle">
+        Backup-Validierungs- und Sicherheits-Dashboard zur zentralen
+        Überwachung von Kunden-Backups bei ITM Technologies — mit
+        Audit-Trail, KPI-Übersicht und Security-first-Architektur.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- OVERVIEW -->
+    <section class="project-overview">
+      <div>
+        <h3>Verantwortung</h3>
+        <p>Konzept, Backend, Frontend</p>
+      </div>
+      <div>
+        <h3>Zeitraum</h3>
+        <p>Seit 2026</p>
+      </div>
+      <div>
+        <h3>Status</h3>
+        <p>In Entwicklung</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2>Projektbeschreibung</h2>
+      <p>
+        Internes Web-Dashboard für ITM Technologies zur zentralen
+        Überwachung und Validierung von Kunden-Backups. Ziel ist eine
+        konsolidierte Sicht auf alle Backup-Quellen mit klaren
+        Statussignalen, KPI-Übersicht und vollständigem Audit-Trail
+        für administrative Prüfentscheidungen.
+      </p>
+      <p>
+        Aufgebaut nach klassischer Schichten-Trennung (Routes, Models,
+        Services) für Wartbarkeit und Erweiterbarkeit. Dark-Theme-UI
+        im ITM-Branding mit Cyan-Akzentfarbe; bewusst ohne npm-Pakete
+        oder JS-Frameworks zur Minimierung der Angriffsfläche.
+      </p>
+    </section>
+
+    <!-- TECH -->
+    <section class="project-section">
+      <h2>Technischer Ansatz</h2>
+      <ul class="tech-list">
+        <li> ° Python mit FastAPI als Backend</li>
+        <li> ° Jinja2 für serverseitiges Templating</li>
+        <li> ° Vanilla JavaScript für interaktive Komponenten</li>
+        <li> ° Eigenes CSS ohne Tailwind oder Bootstrap</li>
+        <li> ° Pydantic für Datenvalidierung, Pydantic Settings für Konfigurations-Management</li>
+        <li> ° Bewusster Verzicht auf npm-Pakete und JS-Frameworks zur Minimierung der Angriffsfläche</li>
+      </ul>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="project-section">
+      <h2>Features</h2>
+      <ul class="tech-list">
+        <li> ° Kundenübersicht mit Ampel-System (grün / gelb / rot) zur visuellen Statuskontrolle</li>
+        <li> ° KPI-Karten für Gesamt-Backups, Erfolgsquote, offene Prüfungen und kritische Fehler</li>
+        <li> ° Heatmap zur Visualisierung der Backup-Gesundheit über Kunden und Zeiträume</li>
+        <li> ° Audit-Trail zur Protokollierung und Dokumentation aller Prüfentscheidungen</li>
+        <li> ° Overlay-basierte Sekundärseiten für Einstellungen, Berichte und Audit-Vollansicht</li>
+      </ul>
+    </section>
+
+    <!-- FOCUS -->
+    <section class="project-section">
+      <h2>Schwerpunkte</h2>
+        <p>
+        <strong>Security:</strong>
+        Strikte Content Security Policy, HTTP-Security-Header
+        (X-Frame-Options, HSTS, Referrer-Policy) und HttpOnly-Cookies
+        als Grundlage für die spätere Authentifizierung.
+        </p>
+        <p>
+        <strong>Architektur:</strong>
+        Modularer Aufbau nach klassischer Schichten-Trennung (Routes,
+        Models, Services) für Wartbarkeit und Erweiterbarkeit. Klare
+        Trennung zwischen serverseitigem Rendering und punktueller
+        Frontend-Interaktion.
+        </p>
+        <p>
+        <strong>UX:</strong>
+        Dark-Theme im ITM-Branding mit Cyan-Akzentfarbe. Konsistente
+        Statussignale (Ampel-Logik) und Overlay-basierte Sekundärseiten
+        für eine fokussierte Hauptansicht.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="project-cta">
+      <a href="index.html" class="btn-secondary">Zurück zur Portfolio-Seite</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
