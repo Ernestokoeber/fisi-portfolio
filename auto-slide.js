@@ -16,9 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let isPaused    = false;
     let resumeTimer = null;
 
+    // CSS setzt scroll-snap-type: x mandatory — das würde jeden Auto-Scroll-Schritt
+    // sofort zur nächsten Card zurückziehen. Deshalb schalten wir Snap nur dann
+    // ein, wenn der User selbst interagiert.
+    slider.style.scrollSnapType = "none";
+
     const pause = () => {
         isPaused = true;
         clearTimeout(resumeTimer);
+        slider.style.scrollSnapType = "";   // CSS-Default zurück (mandatory)
     };
 
     const queueResume = () => {
@@ -26,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resumeTimer = setTimeout(() => {
             position = slider.scrollLeft;
             isPaused = false;
+            slider.style.scrollSnapType = "none";
         }, RESUME_DELAY_MS);
     };
 
