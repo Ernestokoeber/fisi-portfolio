@@ -374,7 +374,7 @@ img {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     scroll-snap-align: start;
 }
@@ -397,6 +397,7 @@ img {
 /* Status */
 .project-status {
     display: inline-block;
+    align-self: flex-start;
     margin-top: 0.5rem;
     padding: 0.2rem 0.6rem;
     font-size: 0.75rem;
