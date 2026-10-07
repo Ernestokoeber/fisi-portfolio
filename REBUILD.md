@@ -44,7 +44,7 @@ Erst auf einer getrennten Testkopie wiederherstellen und fachlich prüfen. Ein C
 
 ## Versionierte Abhängigkeiten
 
-SHA-256 der gesicherten Lock-/Requirements-Dateien:
+SHA-256 der gesicherten Lock-/Requirements-Dateien nach Normalisierung von CRLF auf LF:
 
 | Datei | SHA-256 |
 |---|---|
